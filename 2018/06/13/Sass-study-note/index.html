@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Sass,CSS," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="About SassSass, or Syntactically Awesome StyleSheets, is an extension language for CSS. With Sass, you can write clean, sustainable CSS code and solve the common repetition and maintenance challenges">
+<meta name="keywords" content="Sass,CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sass study note">
+<meta property="og:url" content="http://yoursite.com/2018/06/13/Sass-study-note/index.html">
+<meta property="og:site_name" content="Jingyi&#39;s">
+<meta property="og:description" content="About SassSass, or Syntactically Awesome StyleSheets, is an extension language for CSS. With Sass, you can write clean, sustainable CSS code and solve the common repetition and maintenance challenges">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-06-14T02:23:12.751Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sass study note">
+<meta name="twitter:description" content="About SassSass, or Syntactically Awesome StyleSheets, is an extension language for CSS. With Sass, you can write clean, sustainable CSS code and solve the common repetition and maintenance challenges">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/13/Sass-study-note/"/>
+
+
+
+
+
+  <title>Sass study note | Jingyi's</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jingyi's</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/13/Sass-study-note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jingyi Ding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jingyi's">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Sass study note</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-13T14:58:14-04:00">
+                2018-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/front-end/" itemprop="url" rel="index">
+                    <span itemprop="name">front end</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="About-Sass"><a href="#About-Sass" class="headerlink" title="About Sass"></a>About Sass</h3><p>Sass, or Syntactically Awesome StyleSheets, is an extension language for CSS. With Sass, you can write clean, sustainable CSS code and solve the common repetition and maintenance challenges present in traditional CSS.</p>
+<p>Sass has two syntaxes. The most commonly used syntax is known as “SCSS” (for “Sassy CSS”), and is a superset of CSS3’s syntax. This means that every valid CSS3 stylesheet is valid SCSS as well. SCSS files use the extension .scss.</p>
+<p>The second, older syntax is known as the indented syntax (or just “.sass”). Inspired by Haml’s terseness, it’s intended for people who prefer conciseness over similarity to CSS. Instead of brackets and semicolons, it uses the indentation of lines to specify blocks. Files in the indented syntax use the extension .sass.</p>
+<p>I prefer SCSS because it’s more wide use and is similar to CSS.</p>
+<h3 id="Nesting"><a href="#Nesting" class="headerlink" title="Nesting"></a>Nesting</h3><p>Nesting is the process of placing selectors inside the scope of another selector. (just like HTML!)</p>
+<p>Nesting allows you to see the clear DOM relationship between two selectors while also removing the repetition observed in CSS.</p>
+<p>In SCSS, nesting is not limited only to selectors. You can also nest common CSS properties if you append a <code>:</code> colon suffix after the name of the property.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">  font : &#123;</span><br><span class="line">    family: Roboto, sans-serif;</span><br><span class="line">    size: 12px;</span><br><span class="line">    decoration: none;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>will compile to<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;  </span><br><span class="line">  font-family: Roboto, sans-serif;   </span><br><span class="line">  font-size: 12px;  </span><br><span class="line">  font-decoration: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>The &amp; character in Sass is unique in that it represents the current selector. It changes as you nest.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line"></span><br><span class="line">  $this: &amp;;</span><br><span class="line">  </span><br><span class="line">  &amp;--elem &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line"> </span><br><span class="line">    &amp;:hover,</span><br><span class="line">    #&#123;$this&#125;__variation--active &amp; &#123;</span><br><span class="line">      background: red;</span><br><span class="line">    &#125; </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>will compile to<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent--elem &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">&#125;</span><br><span class="line">.parent--elem:hover, .parent__variation--active .parent--elem &#123;</span><br><span class="line">  background: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Variable"><a href="#Variable" class="headerlink" title="Variable"></a>Variable</h3><p>Variables in SCSS allow you to assign an identifier of your choice to a specific value.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$translucent-white: rgba(255,255,255,0.3);</span><br><span class="line">background-color: $translucent-white;</span><br><span class="line">$baseLineHeight:1.5 !default; /* default variable */</span><br></pre></td></tr></table></figure>
+<p>Type:</p>
+<ul>
+<li>Color</li>
+<li>Numbers</li>
+<li>String</li>
+<li>Booleans</li>
+<li>null</li>
+<li>maps</li>
+<li>lists</li>
+</ul>
+<h3 id="Maps-amp-Lists"><a href="#Maps-amp-Lists" class="headerlink" title="Maps &amp; Lists"></a>Maps &amp; Lists</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$standard-border: 4px solid black; //list</span><br><span class="line">/*different in Sass but same in css*/</span><br><span class="line">$twolist: (1px 2px) (5px 6px) ;</span><br><span class="line">$fourlist: 1px 2px 5px 6px;</span><br><span class="line">$emptylist: ();</span><br><span class="line">$map: (key1: value1, key2: value2); //map</span><br></pre></td></tr></table></figure>
+<h3 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass --watch &lt;sassfile&gt;/style.scss:&lt;target.css&gt;/style.css</span><br></pre></td></tr></table></figure>
+<ul>
+<li>encoding: utf-8</li>
+</ul>
+<p>Gulp:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">var sass = require(&apos;gulp-sass&apos;);</span><br><span class="line"></span><br><span class="line">gulp.task(&apos;sass&apos;, function () &#123;</span><br><span class="line">    gulp.src(&apos;./scss/*.scss&apos;)</span><br><span class="line">        .pipe(sass())</span><br><span class="line">        .pipe(gulp.dest(&apos;./css&apos;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(&apos;watch&apos;, function() &#123;</span><br><span class="line">    gulp.watch(&apos;scss/*.scss&apos;, [&apos;sass&apos;]);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(&apos;default&apos;, [&apos;sass&apos;,&apos;watch&apos;]);</span><br></pre></td></tr></table></figure>
+<h3 id="Mixin"><a href="#Mixin" class="headerlink" title="Mixin"></a>Mixin</h3><p><code>@mixin</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/* parameter with default value, SASS also support multiple parameter */</span><br><span class="line">@mixin border-radius($radius:3px)&#123;</span><br><span class="line">  -webkit-border-radius: $radius;</span><br><span class="line">  border-radius: $radius;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.box &#123;</span><br><span class="line">  @include border-radius(50%);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.box &#123;</span><br><span class="line">  @include border-radius;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h3><p><code>@extend</code><br>Similiar to inheritance in CSS, but it will generate multiple selectors on the orginal style code.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.btn &#123;</span><br><span class="line">  border: 1px solid #ccc;</span><br><span class="line">  padding: 6px 10px;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.btn-primary &#123;</span><br><span class="line">  background-color: #f36;</span><br><span class="line">  color: #fff;</span><br><span class="line">  @extend .btn;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>will compile to </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.btn, .btn-primary &#123;</span><br><span class="line">  border: 1px solid #ccc;</span><br><span class="line">  padding: 6px 10px;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.btn-primary &#123;</span><br><span class="line">  background-color: #f36;</span><br><span class="line">  color: #fff;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="placeholder"><a href="#placeholder" class="headerlink" title="placeholder%"></a>placeholder%</h3><p><code>%</code></p>
+<p>Placeholder selectors have the property that they will not show up in the generated CSS, only the selectors that extend them will be included in the output. </p>
+<p>Moreover, it will put the same css code together:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">%mt5 &#123;</span><br><span class="line">  margin-top: 5px;</span><br><span class="line">&#125;</span><br><span class="line">%pt5&#123;</span><br><span class="line">  padding-top: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.btn &#123;</span><br><span class="line">  @extend %mt5;</span><br><span class="line">  @extend %pt5;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.block &#123;</span><br><span class="line">  @extend %mt5;</span><br><span class="line"></span><br><span class="line">  span &#123;</span><br><span class="line">    @extend %pt5;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>will compile to </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.block, .btn &#123;</span><br><span class="line">  margin-top: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.block span, .btn &#123;</span><br><span class="line">  padding-top: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The class call <code>@extend</code> will replace the class be called, so in this example, <code>.block</code> and <code>.btn</code> will replace <code>%mt5</code>.</p>
+<p><strong>If you need variables, use a mixin. Otherwise, extend a placeholder.</strong></p>
+<h3 id="Interpolation"><a href="#Interpolation" class="headerlink" title="Interpolation"></a>Interpolation</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$properties: (margin, padding);</span><br><span class="line">@mixin set-value($side, $value) &#123;</span><br><span class="line">    @each $prop in $properties &#123;</span><br><span class="line">        #&#123;$prop&#125;-#&#123;$side&#125;: $value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.login-box &#123;</span><br><span class="line">    @include set-value(top, 14px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>will compile to<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.login-box &#123;</span><br><span class="line">  margin-top: 14px;</span><br><span class="line">  padding-top: 14px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Can use to construct selector name in mixin, but cannot construct variable name; Can construct variable name in <code>@extend</code>;</p>
+<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><p><code>//</code> will not compile to CSS;<br><code>/**/</code> will compile to CSS.</p>
+<h3 id="Operator"><a href="#Operator" class="headerlink" title="Operator"></a>Operator</h3><p>+, - , * , /, %;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">//multiplying two numbers of the same unit together will produce invalid CSS:</span><br><span class="line">h2 &#123;</span><br><span class="line">    font-size: 5px * 2px; // invalid CSS</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//divid</span><br><span class="line">.box &#123;</span><br><span class="line">  width: (1000px / 100px);</span><br><span class="line">&#125;</span><br><span class="line">// =&gt;</span><br><span class="line">.box &#123;</span><br><span class="line">  width: 10;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">font-size: 16px / 24px // Outputs as CSS</span><br><span class="line"></span><br><span class="line">font-size: (24px / 2px) // Uses parentheses, does division, output 12, not 12px</span><br><span class="line"></span><br><span class="line">font-size: #&#123;$base-size&#125; / #&#123;$line-height&#125;; // Uses interpolation, outputs as CSS</span><br><span class="line"></span><br><span class="line">font-size: $base-size / $line-height // Uses variables, does division</span><br><span class="line"></span><br><span class="line">opacity: random(4) / 5; // Uses a function, does division</span><br><span class="line"></span><br><span class="line">padding-right: 2px / 4px + 3px // Uses an arithmetic expression, does division</span><br><span class="line"></span><br><span class="line">/* for color</span><br><span class="line"> * 01 + 04, 02 + 05, 03 + 06</span><br><span class="line"> * /</span><br><span class="line">p &#123;</span><br><span class="line">  color: #010203 + #040506;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p &#123;</span><br><span class="line">  color: #050709;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$content: &quot;Hello&quot; + &quot;&quot; + &quot;Sass!&quot;; //concate string</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Sass/" rel="tag"># Sass</a>
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/12/Build-blog-with-Hexo/" rel="next" title="Build blog with Hexo (self summary)">
+                <i class="fa fa-chevron-left"></i> Build blog with Hexo (self summary)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jingyi Ding</p>
+              <p class="site-description motion-element" itemprop="description">Coder, learner, Front-end Developer</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/dingjy94" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:dingjy94@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.linkedin.com/in/jingyi-ding-1bb186b7/" target="_blank" title="Linkedin">
+                      
+                        <i class="fa fa-fw fa-linkedin"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#About-Sass"><span class="nav-number">1.</span> <span class="nav-text">About Sass</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nesting"><span class="nav-number">2.</span> <span class="nav-text">Nesting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Variable"><span class="nav-number">3.</span> <span class="nav-text">Variable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Maps-amp-Lists"><span class="nav-number">4.</span> <span class="nav-text">Maps &amp; Lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compile"><span class="nav-number">5.</span> <span class="nav-text">Compile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mixin"><span class="nav-number">6.</span> <span class="nav-text">Mixin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inheritance"><span class="nav-number">7.</span> <span class="nav-text">Inheritance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#placeholder"><span class="nav-number">8.</span> <span class="nav-text">placeholder%</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interpolation"><span class="nav-number">9.</span> <span class="nav-text">Interpolation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comment"><span class="nav-number">10.</span> <span class="nav-text">Comment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Operator"><span class="nav-number">11.</span> <span class="nav-text">Operator</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jingyi Ding</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
