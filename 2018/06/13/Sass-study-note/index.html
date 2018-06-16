@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Sass,CSS," />
+  <meta name="keywords" content="CSS,Sass," />
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="About SassSass, or Syntactically Awesome StyleSheets, is an extension language for CSS. With Sass, you can write clean, sustainable CSS code and solve the common repetition and maintenance challenges">
-<meta name="keywords" content="Sass,CSS">
+<meta name="keywords" content="CSS,Sass">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sass study note">
 <meta property="og:url" content="http://yoursite.com/2018/06/13/Sass-study-note/index.html">
 <meta property="og:site_name" content="Jingyi&#39;s">
 <meta property="og:description" content="About SassSass, or Syntactically Awesome StyleSheets, is an extension language for CSS. With Sass, you can write clean, sustainable CSS code and solve the common repetition and maintenance challenges">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-14T02:23:12.751Z">
+<meta property="og:updated_time" content="2018-06-15T23:58:18.553Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sass study note">
 <meta name="twitter:description" content="About SassSass, or Syntactically Awesome StyleSheets, is an extension language for CSS. With Sass, you can write clean, sustainable CSS code and solve the common repetition and maintenance challenges">
@@ -359,8 +359,8 @@
 <h3 id="Nesting"><a href="#Nesting" class="headerlink" title="Nesting"></a>Nesting</h3><p>Nesting is the process of placing selectors inside the scope of another selector. (just like HTML!)</p>
 <p>Nesting allows you to see the clear DOM relationship between two selectors while also removing the repetition observed in CSS.</p>
 <p>In SCSS, nesting is not limited only to selectors. You can also nest common CSS properties if you append a <code>:</code> colon suffix after the name of the property.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">  font : &#123;</span><br><span class="line">    family: Roboto, sans-serif;</span><br><span class="line">    size: 12px;</span><br><span class="line">    decoration: none;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>will compile to<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;  </span><br><span class="line">  font-family: Roboto, sans-serif;   </span><br><span class="line">  font-size: 12px;  </span><br><span class="line">  font-decoration: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">  <span class="attribute">font</span> : &#123;</span><br><span class="line">    family: Roboto, sans-serif;</span><br><span class="line">    size: <span class="number">12px</span>;</span><br><span class="line">    decoration: none;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>will compile to<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;  </span><br><span class="line">  <span class="attribute">font-family</span>: Roboto, sans-serif;   </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">12px</span>;  </span><br><span class="line">  <span class="attribute">font-decoration</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>The &amp; character in Sass is unique in that it represents the current selector. It changes as you nest.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line"></span><br><span class="line">  $this: &amp;;</span><br><span class="line">  </span><br><span class="line">  &amp;--elem &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line"> </span><br><span class="line">    &amp;:hover,</span><br><span class="line">    #&#123;$this&#125;__variation--active &amp; &#123;</span><br><span class="line">      background: red;</span><br><span class="line">    &#125; </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>will compile to<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent--elem &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">&#125;</span><br><span class="line">.parent--elem:hover, .parent__variation--active .parent--elem &#123;</span><br><span class="line">  background: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -419,9 +419,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Sass/" rel="tag"># Sass</a>
-          
             <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+            <a href="/tags/Sass/" rel="tag"># Sass</a>
           
         </div>
       
@@ -523,7 +523,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -545,7 +545,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
