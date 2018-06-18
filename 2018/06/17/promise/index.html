@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="About meHi, I’m Jingyi Ding, a new graduate student from University of Florida and a learner in front-end development. My languageEmm, I speak Java, Python, JavaScript, HTML, CSS, know some C++ and El">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jingyi Ding">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="The Promise object is used for deferred and asynchronous computations. A promise can be:  fulfilled - The action relating to the promise succeeded rejected - The action relating to the promise failed">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Promise">
+<meta property="og:url" content="http://yoursite.com/2018/06/17/promise/index.html">
 <meta property="og:site_name" content="Jingyi&#39;s">
-<meta property="og:description" content="About meHi, I’m Jingyi Ding, a new graduate student from University of Florida and a learner in front-end development. My languageEmm, I speak Java, Python, JavaScript, HTML, CSS, know some C++ and El">
+<meta property="og:description" content="The Promise object is used for deferred and asynchronous computations. A promise can be:  fulfilled - The action relating to the promise succeeded rejected - The action relating to the promise failed">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-13T02:53:16.553Z">
+<meta property="og:updated_time" content="2018-06-18T04:03:40.268Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jingyi Ding">
-<meta name="twitter:description" content="About meHi, I’m Jingyi Ding, a new graduate student from University of Florida and a learner in front-end development. My languageEmm, I speak Java, Python, JavaScript, HTML, CSS, know some C++ and El">
+<meta name="twitter:title" content="Promise">
+<meta name="twitter:description" content="The Promise object is used for deferred and asynchronous computations. A promise can be:  fulfilled - The action relating to the promise succeeded rejected - The action relating to the promise failed">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/17/promise/"/>
 
 
 
 
 
-  <title>Jingyi Ding | Jingyi's</title>
+  <title>Promise | Jingyi's</title>
   
 
 
@@ -250,36 +251,182 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/17/promise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jingyi Ding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jingyi's">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">Jingyi Ding</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h3 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h3><p>Hi, I’m Jingyi Ding, a new graduate student from University of Florida and a learner in front-end development.</p>
-<h3 id="My-language"><a href="#My-language" class="headerlink" title="My language"></a>My language</h3><p>Emm, I speak Java, Python, JavaScript, HTML, CSS, know some C++ and Elixir. </p>
-<p>Oh, the human language? I born in China so I speak Chinese fluently. ^_^ And also of course, I speak English. I can also speak Japanese because I have been there for over four years when I was in primary school.</p>
-
+          <h1 class="post-title" itemprop="name headline">Promise</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-17T13:31:02-04:00">
+                2018-06-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/front-end/" itemprop="url" rel="index">
+                    <span itemprop="name">front end</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>The Promise object is used for deferred and asynchronous computations.</p>
+<p>A promise can be:</p>
+<ul>
+<li>fulfilled - The action relating to the promise succeeded</li>
+<li>rejected - The action relating to the promise failed</li>
+<li>pending - Hasn’t fulfilled or rejected yet</li>
+<li>settled - Has fulfilled or rejected</li>
+</ul>
+<p>Promise run on main thread and potentially blocking, use try, catch</p>
+<p>Passing values or undefined through resolve() and reject() to .then and .catch. The values themselves aren’t being passed to .then or .catch, rather they’re being passed to the functions called by .then or .catch.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// log Window</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'first'</span>);</span><br><span class="line">  resolve();</span><br><span class="line">  reject();</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'second'</span>);</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'third'</span>);</span><br><span class="line">&#125;).catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;&#125;);</span><br><span class="line"><span class="comment">// log first, second third</span></span><br></pre></td></tr></table></figure>
+<h3 id="Chain"><a href="#Chain" class="headerlink" title="Chain"></a>Chain</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// getJSON return a json response</span></span><br><span class="line"><span class="comment">//createPlanetThumb(data)</span></span><br><span class="line">getJSON(<span class="string">'../data/earth-like-results.json'</span>)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">      addSearchHeader(response.query);</span><br><span class="line">      <span class="built_in">console</span>.log(response);</span><br><span class="line">      <span class="keyword">return</span> getJSON(response.results[<span class="number">0</span>]);</span><br><span class="line">    &#125;) <span class="comment">// =&gt; next then()</span></span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="built_in">Error</span>(<span class="string">'Search Request Error'</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">    .then(createPlanetThumb)</span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">      addSearchHeader(<span class="string">'unknown'</span>);</span><br><span class="line">      <span class="built_in">console</span>.log(e);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// can call both then &amp; catch</span><br><span class="line">get(&apos;example.json&apos;)</span><br><span class="line">.then(resolve) </span><br><span class="line">.catch(reject);</span><br><span class="line"></span><br><span class="line">//Cannot call both</span><br><span class="line">get(&apos;example.json&apos;)</span><br><span class="line">.then(resolve, reject);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Series: depend on each other</li>
+<li>Parallel</li>
+</ul>
+<h4 id="Array-Methods-and-Promises"><a href="#Array-Methods-and-Promises" class="headerlink" title="Array Methods and Promises"></a>Array Methods and Promises</h4>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/16/MVO/" rel="next" title="MVO">
+                <i class="fa fa-chevron-left"></i> MVO
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -414,7 +561,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#About-me"><span class="nav-number">1.</span> <span class="nav-text">About me</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#My-language"><span class="nav-number">2.</span> <span class="nav-text">My language</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Chain"><span class="nav-number">1.</span> <span class="nav-text">Chain</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-Methods-and-Promises"><span class="nav-number">1.1.</span> <span class="nav-text">Array Methods and Promises</span></a></li></ol></li></ol></div>
             
 
           </div>
