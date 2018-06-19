@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,Udacity," />
+  <meta name="keywords" content="JavaScript,Ajax," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="M(Model), O(Octopus), V(View)  View: User see, DOM elements … Model: Data, from server/user Octopus: keep things connect but separately, C(controller), VM(view model), P(presenter), *(whatever…)  Keep">
-<meta name="keywords" content="JavaScript,Udacity">
+<meta name="description" content="Asynchronous JavaScript And XML Response: Data   XML JSON HTML  Ajax with XHR1const asyncRequestObject = new XMLHttpRequest(); open: 1asyncRequestObject.open(&apos;GET&apos;, &apos;https://unsplash.com&apos;); The XHR’s">
+<meta name="keywords" content="JavaScript,Ajax">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MVO">
-<meta property="og:url" content="http://yoursite.com/2018/06/16/MVO/index.html">
+<meta property="og:title" content="Ajax">
+<meta property="og:url" content="http://yoursite.com/2018/06/18/Ajax/index.html">
 <meta property="og:site_name" content="Jingyi&#39;s">
-<meta property="og:description" content="M(Model), O(Octopus), V(View)  View: User see, DOM elements … Model: Data, from server/user Octopus: keep things connect but separately, C(controller), VM(view model), P(presenter), *(whatever…)  Keep">
+<meta property="og:description" content="Asynchronous JavaScript And XML Response: Data   XML JSON HTML  Ajax with XHR1const asyncRequestObject = new XMLHttpRequest(); open: 1asyncRequestObject.open(&apos;GET&apos;, &apos;https://unsplash.com&apos;); The XHR’s">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-16T20:30:25.570Z">
+<meta property="og:updated_time" content="2018-06-18T20:24:53.108Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MVO">
-<meta name="twitter:description" content="M(Model), O(Octopus), V(View)  View: User see, DOM elements … Model: Data, from server/user Octopus: keep things connect but separately, C(controller), VM(view model), P(presenter), *(whatever…)  Keep">
+<meta name="twitter:title" content="Ajax">
+<meta name="twitter:description" content="Asynchronous JavaScript And XML Response: Data   XML JSON HTML  Ajax with XHR1const asyncRequestObject = new XMLHttpRequest(); open: 1asyncRequestObject.open(&apos;GET&apos;, &apos;https://unsplash.com&apos;); The XHR’s">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/16/MVO/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/18/Ajax/"/>
 
 
 
 
 
-  <title>MVO | Jingyi's</title>
+  <title>Ajax | Jingyi's</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/16/MVO/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/18/Ajax/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jingyi Ding">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MVO</h1>
+          <h1 class="post-title" itemprop="name headline">Ajax</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-16T15:37:41-04:00">
-                2018-06-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-18T14:03:07-04:00">
+                2018-06-18
               </time>
             
 
@@ -352,22 +352,30 @@
       
 
       
-        <p>M(Model), O(Octopus), V(View)</p>
+        <p>Asynchronous JavaScript And XML</p>
+<p>Response:</p>
+<p>Data </p>
 <ul>
-<li>View: User see, DOM elements …</li>
-<li>Model: Data, from server/user</li>
-<li>Octopus: keep things connect but separately, C(controller), VM(view model), P(presenter), *(whatever…)</li>
+<li>XML</li>
+<li>JSON</li>
+<li>HTML</li>
 </ul>
-<p>Keep MV simple;</p>
-<p>M and V shouldn’t talk to each other directly;</p>
-<h3 id="Development-steps"><a href="#Development-steps" class="headerlink" title="Development steps"></a>Development steps</h3><ol>
-<li>plan, identify model and view<ul>
-<li>view separate by render</li>
-</ul>
-</li>
-<li>identify octopus</li>
-<li>code</li>
-</ol>
+<h3 id="Ajax-with-XHR"><a href="#Ajax-with-XHR" class="headerlink" title="Ajax with XHR"></a>Ajax with XHR</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> asyncRequestObject = <span class="keyword">new</span> XMLHttpRequest();</span><br></pre></td></tr></table></figure>
+<p>open:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">asyncRequestObject.open(<span class="string">'GET'</span>, <span class="string">'https://unsplash.com'</span>);</span><br></pre></td></tr></table></figure>
+<p>The XHR’s <code>.open()</code> method does not actually send the request! It sets the stage and gives the object the info it will need when the request is actually sent.</p>
+<p>send:</p>
+<p><code>asyncRequestObject.send();</code>  </p>
+<p>onload:</p>
+<p>To handle the successful response of an XHR request, we set the onload property on the object to a function that will handle it.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleSuccess</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// in the function, the `this` value is the XHR object</span></span><br><span class="line">    <span class="comment">// this.responseText holds the response from the server</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log( <span class="keyword">this</span>.responseText ); <span class="comment">// the HTML of https://unsplash.com/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">asyncRequestObject.onload = handleSuccess;</span><br></pre></td></tr></table></figure>
+<p>onerror:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleError</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// in the function, the `this` value is the XHR object</span></span><br><span class="line">    <span class="built_in">console</span>.log( <span class="string">'An error occurred'</span> );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">asyncRequestObject.onerror = handleError;</span><br></pre></td></tr></table></figure>
+<p>JSON.parse():</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleSuccess</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">const</span> data = <span class="built_in">JSON</span>.parse( <span class="keyword">this</span>.responseText ); <span class="comment">// convert data from JSON to a JavaScript object</span></span><br><span class="line"><span class="built_in">console</span>.log( data );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">asyncRequestObject.onload = handleSuccess;</span><br></pre></td></tr></table></figure>
+<p>setRequestHeader()</p>
+<p>.responseText</p>
+<p><code>.responseText</code> holds the text of the async request’s response</p>
 
       
     </div>
@@ -387,7 +395,7 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/Udacity/" rel="tag"># Udacity</a>
+            <a href="/tags/Ajax/" rel="tag"># Ajax</a>
           
         </div>
       
@@ -400,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/14/Bootstrap-study-note/" rel="next" title="Bootstrap study note">
-                <i class="fa fa-chevron-left"></i> Bootstrap study note
+              <a href="/2018/06/17/promise/" rel="next" title="Promise">
+                <i class="fa fa-chevron-left"></i> Promise
               </a>
             
           </div>
@@ -410,8 +418,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/17/promise/" rel="prev" title="Promise">
-                Promise <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/18/Ajax-JQuery/" rel="prev" title="Ajax JQuery">
+                Ajax JQuery <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -566,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Development-steps"><span class="nav-number">1.</span> <span class="nav-text">Development steps</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ajax-with-XHR"><span class="nav-number">1.</span> <span class="nav-text">Ajax with XHR</span></a></li></ol></div>
             
 
           </div>

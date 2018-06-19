@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Jingyi&#39;s">
 <meta property="og:description" content="The Promise object is used for deferred and asynchronous computations. A promise can be:  fulfilled - The action relating to the promise succeeded rejected - The action relating to the promise failed">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-18T04:03:40.268Z">
+<meta property="og:updated_time" content="2018-06-18T04:31:32.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Promise">
 <meta name="twitter:description" content="The Promise object is used for deferred and asynchronous computations. A promise can be:  fulfilled - The action relating to the promise succeeded rejected - The action relating to the promise failed">
@@ -369,7 +369,15 @@
 <li>Series: depend on each other</li>
 <li>Parallel</li>
 </ul>
-<h4 id="Array-Methods-and-Promises"><a href="#Array-Methods-and-Promises" class="headerlink" title="Array Methods and Promises"></a>Array Methods and Promises</h4>
+<h4 id="Array-Methods-and-Promises-Series"><a href="#Array-Methods-and-Promises-Series" class="headerlink" title="Array Methods and Promises (Series)"></a>Array Methods and Promises (Series)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">getJSON(<span class="string">'../data/earth-like-results.json'</span>)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">let</span> sequence = <span class="built_in">Promise</span>.resolve();</span><br><span class="line">      response.results.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">        sequence = sequence.then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> getJSON(url);</span><br><span class="line">      &#125;);</span><br><span class="line">    .then(createPlanetThumb);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="Promises-with-map-Parallet"><a href="#Promises-with-map-Parallet" class="headerlink" title="Promises with .map (Parallet)"></a>Promises with .map (Parallet)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">getJSON(<span class="string">'../data/earth-like-results.json'</span>)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">      addSearchHeader(response.query);</span><br><span class="line"></span><br><span class="line">      response.results.map(<span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">        getJSON(url).then(createPlanetThumb);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="all"><a href="#all" class="headerlink" title=".all"></a>.all</h4><ul>
+<li>Reject if just one Promise rejects</li>
+<li>Resolves after every Promise resolves</li>
+<li>can save the order</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">getJSON(<span class="string">'../data/earth-like-results.json'</span>)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">      addSearchHeader(response.query);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Promise</span>.all(response.results.map(getJSON));</span><br><span class="line">    &#125;)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">planetData</span>) </span>&#123;</span><br><span class="line">      planetData.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">planet</span>) </span>&#123;</span><br><span class="line">        createPlanetThumb(planet);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(error);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -408,6 +416,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/18/Ajax/" rel="prev" title="Ajax">
+                Ajax <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -484,7 +496,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -506,7 +518,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -561,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Chain"><span class="nav-number">1.</span> <span class="nav-text">Chain</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-Methods-and-Promises"><span class="nav-number">1.1.</span> <span class="nav-text">Array Methods and Promises</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Chain"><span class="nav-number">1.</span> <span class="nav-text">Chain</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-Methods-and-Promises-Series"><span class="nav-number">1.1.</span> <span class="nav-text">Array Methods and Promises (Series)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promises-with-map-Parallet"><span class="nav-number">1.2.</span> <span class="nav-text">Promises with .map (Parallet)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#all"><span class="nav-number">1.3.</span> <span class="nav-text">.all</span></a></li></ol></li></ol></div>
             
 
           </div>
