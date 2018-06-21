@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript,BackboneJS," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Underscore12&amp;lt;%= menuItem.rating %&amp;gt;&amp;lt;%= menuItem.calories %&amp;gt; Constructor Function1234567891011const numLetters = function(letter) &amp;#123;    return new Function(&apos;num&apos;,         &quot;if (num &amp;lt; 0">
+<meta name="keywords" content="JavaScript,BackboneJS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="backboneJS">
+<meta property="og:url" content="http://yoursite.com/2018/06/19/backboneJS/index.html">
+<meta property="og:site_name" content="Jingyi&#39;s">
+<meta property="og:description" content="Underscore12&amp;lt;%= menuItem.rating %&amp;gt;&amp;lt;%= menuItem.calories %&amp;gt; Constructor Function1234567891011const numLetters = function(letter) &amp;#123;    return new Function(&apos;num&apos;,         &quot;if (num &amp;lt; 0">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-06-20T02:44:27.599Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="backboneJS">
+<meta name="twitter:description" content="Underscore12&amp;lt;%= menuItem.rating %&amp;gt;&amp;lt;%= menuItem.calories %&amp;gt; Constructor Function1234567891011const numLetters = function(letter) &amp;#123;    return new Function(&apos;num&apos;,         &quot;if (num &amp;lt; 0">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/19/backboneJS/"/>
+
+
+
+
+
+  <title>backboneJS | Jingyi's</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jingyi's</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/19/backboneJS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jingyi Ding">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jingyi's">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">backboneJS</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-19T13:03:10-04:00">
+                2018-06-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/front-end/" itemprop="url" rel="index">
+                    <span itemprop="name">front end</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Underscore"><a href="#Underscore" class="headerlink" title="Underscore"></a>Underscore</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= menuItem.rating %&gt;</span><br><span class="line">&lt;%= menuItem.calories %&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Constructor-Function"><a href="#Constructor-Function" class="headerlink" title="Constructor Function"></a>Constructor Function</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numLetters = <span class="function"><span class="keyword">function</span>(<span class="params">letter</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">'num'</span>, </span><br><span class="line">        <span class="string">"if (num &lt; 0) return ''; \</span></span><br><span class="line"><span class="string">         let result = ''; \</span></span><br><span class="line"><span class="string">         num = Math.round(num); \</span></span><br><span class="line"><span class="string">         while (num &gt;= 0) &#123; \</span></span><br><span class="line"><span class="string">            num--; \</span></span><br><span class="line"><span class="string">            result += '"</span> + letter + <span class="string">"';&#125;"</span> + </span><br><span class="line">         <span class="string">"return result;"</span></span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>When creating Backbone templates, make sure to access your data as properties on an object, and to pass that object name in with the template’s settings.</p>
+<h3 id="Custom-Listener"><a href="#Custom-Listener" class="headerlink" title="Custom Listener"></a>Custom Listener</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// create the custom `partyTime` event</span></span><br><span class="line"><span class="keyword">var</span> myCustomEvent= <span class="keyword">new</span> CustomEvent( <span class="string">'partyTime'</span>, &#123;<span class="attr">timeToParty</span>: <span class="literal">true</span>, <span class="attr">partyYear</span>: <span class="number">1999</span>&#125; );</span><br><span class="line"></span><br><span class="line"><span class="comment">// listen to the `document` for the `partyTime` event</span></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'partyTime'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (evt.partyYear) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log( <span class="string">"Partying like it's "</span> + evt.partyYear + <span class="string">"!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">document</span>.body.style.backgroundImage = <span class="string">'linear-gradient(90deg, orange, blue)'</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// trigger the custom event</span></span><br><span class="line"><span class="built_in">document</span>.dispatchEvent( myCustomEvent );</span><br></pre></td></tr></table></figure>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> jack = &#123;&#125;;</span><br><span class="line">_.extend(jack, Backbone.Events);</span><br><span class="line">jack.on(<span class="string">"birthday party presents"</span>, purchase);</span><br><span class="line">jack.on(<span class="string">'presents'</span>, build)</span><br><span class="line"><span class="comment">//.on(event, callback)</span></span><br><span class="line"><span class="comment">//event name can be object, single string, </span></span><br><span class="line"><span class="comment">//space separated string(add cb to each events)</span></span><br></pre></td></tr></table></figure>
+<p>turn to<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jack._events = &#123;</span><br><span class="line">  birthday: [&#123;<span class="attr">callback</span>: purchase&#125;],</span><br><span class="line">  party: [&#123;<span class="attr">callback</span>: purchase&#125;],</span><br><span class="line">  presents: [</span><br><span class="line">      &#123;<span class="attr">callback</span>: purchase&#125;,</span><br><span class="line">      &#123;<span class="attr">callback</span>: build&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Events.on =&gt; internalOn =&gt; eventsApi =&gt; onApi</p>
+<p>Events store as a property of origianl Object</p>
+<h3 id="Routing"><a href="#Routing" class="headerlink" title="Routing"></a>Routing</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">routes: &#123;</span><br><span class="line">  <span class="string">''</span>: <span class="string">'home'</span>,</span><br><span class="line">  <span class="string">'mountain/:id'</span>: <span class="string">'mountain'</span>,</span><br><span class="line">  <span class="string">'download/*brochure'</span>: <span class="string">'download</span></span><br><span class="line"><span class="string">&#125;,</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">home: function() &#123;...&#125;,</span></span><br><span class="line"><span class="string">mountain: function(id) &#123;&#125;,</span></span><br><span class="line"><span class="string">download: function(brochure) &#123;&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="hashchange"><a href="#hashchange" class="headerlink" title="hashchange"></a>hashchange</h3><p>The event that’s fired when the fragment identifier is added or changed is the hashchange event. Frameworks use this event to power routing in single page apps.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(window).on(&apos;hashchange&apos;, function() &#123;</span><br><span class="line">    var newPageUrl = getFragmentIdentifier();</span><br><span class="line"></span><br><span class="line">    $.get( newPageUrl, function( pageContents ) &#123;</span><br><span class="line">        $(&apos;#content&apos;).html( pageContents );</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>If our website were located at <a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a>, changing the URL to <a href="http://example.com/#page.html" target="_blank" rel="noopener">http://example.com/#page.html</a> will load the new page’s content into #content element.</p>
+<h3 id="Basic-idea-of-framworks’-template"><a href="#Basic-idea-of-framworks’-template" class="headerlink" title="Basic idea of framworks’ template"></a>Basic idea of framworks’ template</h3><p>A template of get (str) and return function(time), which log time * str</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">template</span>(<span class="params">str, delims</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> delimiter = &#123;</span><br><span class="line">  	open: <span class="string">'*('</span>,</span><br><span class="line">  	close: <span class="string">')*'</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">let</span> templateString = [];</span><br><span class="line">  <span class="keyword">let</span> i = <span class="number">1</span>; <span class="comment">//start from 1</span></span><br><span class="line">  <span class="keyword">let</span> closingLoc = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> functionArguments = [];</span><br><span class="line">  <span class="keyword">let</span> variable, remain;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> delims) &#123;</span><br><span class="line">  	<span class="keyword">if</span> (delims.hasOwnProperty(key)) &#123;</span><br><span class="line">  		<span class="keyword">if</span> (delims[key] != <span class="literal">undefined</span>) &#123;</span><br><span class="line">  			delimiter[key] = delims[key];</span><br><span class="line">  		&#125;</span><br><span class="line">  	&#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> segment = str.split(delimiter.open);</span><br><span class="line">  <span class="keyword">const</span> numOfSegment = segment.length;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> wrapInQuotes = <span class="function"><span class="params">text</span> =&gt;</span> &#123;</span><br><span class="line">  	<span class="keyword">return</span> <span class="string">"'"</span> + text + <span class="string">"'"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  templateString.push(wrapInQuotes(segment[<span class="number">0</span>]));</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//push all variable in functionArgumets array</span></span><br><span class="line">  <span class="comment">// push other string in templateString with quotes surrond(as string)</span></span><br><span class="line">  <span class="comment">// push variable in templateString (as variable)</span></span><br><span class="line">  <span class="keyword">while</span> (i &lt; numOfSegment) &#123;</span><br><span class="line">  	closingLoc = segment[i].indexOf(delimiter.close);</span><br><span class="line">    </span><br><span class="line">    variable = segment[i].slice(<span class="number">0</span>, closingLoc);</span><br><span class="line">    functionArguments.push(variable);</span><br><span class="line">    templateString.push(variable);</span><br><span class="line">    </span><br><span class="line">    remain = segment[i].slice(closingLoc + delimiter.close.length);</span><br><span class="line">    templateString.push(wrapInQuotes(remain));</span><br><span class="line"></span><br><span class="line">    i++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  templateString = <span class="string">'while (times--) &#123; console.log('</span> + templateString.join(<span class="string">'+'</span>) + <span class="string">')&#125;'</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Function</span>(functionArguments.join( <span class="string">','</span> ), <span class="string">'times'</span>, templateString);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Basic-idea-of-Event"><a href="#Basic-idea-of-Event" class="headerlink" title="Basic idea of Event"></a>Basic idea of Event</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EventTracker</span> </span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="keyword">this</span>._events = &#123;&#125;;</span><br><span class="line">		<span class="keyword">this</span>._notify = &#123;&#125;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	on(event, callback) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>._events[event] === <span class="literal">undefined</span>) &#123;</span><br><span class="line">			<span class="keyword">this</span>._events[event] = [];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">this</span>._events[event].push(callback);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	notify(otherObject, event) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>._notify[event] === <span class="literal">undefined</span>) &#123;</span><br><span class="line">			<span class="keyword">this</span>._notify[event] = [];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">this</span>._notify[event].push(otherObject);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	trigger(event, data) &#123;</span><br><span class="line">		<span class="keyword">const</span> callbacks = <span class="keyword">this</span>._events[event] || <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">const</span> toNotify = <span class="keyword">this</span>._notify[event] || <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">let</span> i;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; callbacks.length; i++) &#123;</span><br><span class="line">			callbacks[i].call(<span class="keyword">this</span>, data);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; toNotify.length; i++)&#123;</span><br><span class="line">			toNotify[i].trigger(event, data);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/BackboneJS/" rel="tag"># BackboneJS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/19/Ajax-Fetch/" rel="next" title="Ajax Fetch">
+                <i class="fa fa-chevron-left"></i> Ajax Fetch
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/19/AngularJS-1/" rel="prev" title="AngularJS">
+                AngularJS <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jingyi Ding</p>
+              <p class="site-description motion-element" itemprop="description">Coder, learner, Front-end Developer</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/dingjy94" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:dingjy94@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.linkedin.com/in/jingyi-ding-1bb186b7/" target="_blank" title="Linkedin">
+                      
+                        <i class="fa fa-fw fa-linkedin"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Underscore"><span class="nav-number">1.</span> <span class="nav-text">Underscore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Constructor-Function"><span class="nav-number">2.</span> <span class="nav-text">Constructor Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Custom-Listener"><span class="nav-number">3.</span> <span class="nav-text">Custom Listener</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Events"><span class="nav-number">4.</span> <span class="nav-text">Events</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Routing"><span class="nav-number">5.</span> <span class="nav-text">Routing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hashchange"><span class="nav-number">6.</span> <span class="nav-text">hashchange</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-idea-of-framworks’-template"><span class="nav-number">7.</span> <span class="nav-text">Basic idea of framworks’ template</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-idea-of-Event"><span class="nav-number">8.</span> <span class="nav-text">Basic idea of Event</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jingyi Ding</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
