@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,Udacity," />
+  <meta name="keywords" content="JavaScript,EmberJS," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="M(Model), O(Octopus), V(View)  View: User see, DOM elements … Model: Data, from server/user Octopus: keep things connect but separately, C(controller), VM(view model), P(presenter), *(whatever…)  Keep">
-<meta name="keywords" content="JavaScript,Udacity">
+<meta name="description" content="Create ember new name ember serve  Route   Route Template      / application   /menu menu   /item/:item_name item     :item_name: Dynamic segment ember g route menu  123Router.map(function() &amp;#123;  t">
+<meta name="keywords" content="JavaScript,EmberJS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MVO">
-<meta property="og:url" content="http://yoursite.com/2018/06/16/MVO/index.html">
+<meta property="og:title" content="EmberJS">
+<meta property="og:url" content="http://yoursite.com/2018/06/22/EmberJS/index.html">
 <meta property="og:site_name" content="Jingyi&#39;s">
-<meta property="og:description" content="M(Model), O(Octopus), V(View)  View: User see, DOM elements … Model: Data, from server/user Octopus: keep things connect but separately, C(controller), VM(view model), P(presenter), *(whatever…)  Keep">
+<meta property="og:description" content="Create ember new name ember serve  Route   Route Template      / application   /menu menu   /item/:item_name item     :item_name: Dynamic segment ember g route menu  123Router.map(function() &amp;#123;  t">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-16T20:30:25.570Z">
+<meta property="og:updated_time" content="2018-06-23T02:03:16.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MVO">
-<meta name="twitter:description" content="M(Model), O(Octopus), V(View)  View: User see, DOM elements … Model: Data, from server/user Octopus: keep things connect but separately, C(controller), VM(view model), P(presenter), *(whatever…)  Keep">
+<meta name="twitter:title" content="EmberJS">
+<meta name="twitter:description" content="Create ember new name ember serve  Route   Route Template      / application   /menu menu   /item/:item_name item     :item_name: Dynamic segment ember g route menu  123Router.map(function() &amp;#123;  t">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/16/MVO/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/22/EmberJS/"/>
 
 
 
 
 
-  <title>MVO | Jingyi's</title>
+  <title>EmberJS | Jingyi's</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/16/MVO/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/22/EmberJS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jingyi Ding">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MVO</h1>
+          <h1 class="post-title" itemprop="name headline">EmberJS</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-16T15:37:41-04:00">
-                2018-06-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-22T21:52:05-04:00">
+                2018-06-22
               </time>
             
 
@@ -352,23 +352,77 @@
       
 
       
-        <p>M(Model), O(Octopus), V(View)</p>
-<ul>
-<li>View: User see, DOM elements …</li>
-<li>Model: Data, from server/user</li>
-<li>Octopus: keep things connect but separately, C(controller), VM(view model), P(presenter), *(whatever…)</li>
+        <h3 id="Create"><a href="#Create" class="headerlink" title="Create"></a>Create</h3><ul>
+<li><code>ember new name</code></li>
+<li><code>ember serve</code></li>
 </ul>
-<p>Keep MV simple;</p>
-<p>M and V shouldn’t talk to each other directly;</p>
-<h3 id="Development-steps"><a href="#Development-steps" class="headerlink" title="Development steps"></a>Development steps</h3><ol>
-<li>plan, identify model and view<ul>
-<li>view separate by render</li>
+<h3 id="Route"><a href="#Route" class="headerlink" title="Route"></a>Route</h3><table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Template</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> /</td>
+<td>application</td>
+</tr>
+<tr>
+<td>/menu</td>
+<td>menu</td>
+</tr>
+<tr>
+<td>/item/:item_name</td>
+<td>item</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>:item_name</code>: Dynamic segment</li>
+<li><code>ember g route menu</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Router.map(function() &#123;</span><br><span class="line">  this.route(&apos;bricks&apos;, &#123; path: &apos;/legos&apos; &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>nested route <code>ember g route item/nutrition</code></li>
+<li><code>outlet</code>, where the nest locate</li>
+</ul>
+<p>link:<br><figure class="highlight plain"><figcaption><span>'Instructions' 'index' id</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### Handlebars</span><br><span class="line">Ember templates are powered by the Handlebars templating language. A Handlebars template is a block of HTML that has Handlebars expressions that look like `  brick_color  `. In this example, &quot;brick_color&quot; will print out the contents of the &quot;brick_color&quot; variable.</span><br><span class="line"></span><br><span class="line">```JavaScript</span><br><span class="line">// get template from HTML</span><br><span class="line">var brickContainer = document.querySelector( &apos;#brick-container&apos; );</span><br><span class="line">var brickTemplate = document.querySelector( &apos;#brick-template&apos; );</span><br><span class="line"></span><br><span class="line">// compile source template into a template function</span><br><span class="line">var template = Handlebars.compile( brickTemplate.innerHTML );</span><br><span class="line"></span><br><span class="line">// the app&apos;s data</span><br><span class="line">var context = &#123;name: &apos;Red Brick&apos;, description: &apos;A colored brick that can be used to...&apos;&#125;;</span><br><span class="line"></span><br><span class="line">// build the HTML template with the supplied data</span><br><span class="line">var html = template(context);</span><br><span class="line"></span><br><span class="line">// fill the page with content</span><br><span class="line">brickContainer.innerHTML = html;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"brick-container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"brick-template"</span> <span class="attr">type</span>=<span class="string">"text/x-handlebars-template"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"brick"</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span> name <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"desc"</span>&gt;</span></span></span><br><span class="line"><span class="undefined">             description </span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>if</p>
+<ul>
+<li><code>if item.onSale &#39;on-sale&#39; &#39;&#39;</code></li>
+<li><code>#if condition .... /if</code></li>
 </ul>
 </li>
-<li>identify octopus</li>
-<li>code</li>
-</ol>
-
+<li><p>loop</p>
+<p><code>#each item.bricks as |brick| ... /each</code></p>
+</li>
+</ul>
+<h3 id="Loading-Dynamic-Data"><a href="#Loading-Dynamic-Data" class="headerlink" title="Loading Dynamic Data"></a>Loading Dynamic Data</h3><p>Hooks</p>
+<ul>
+<li>model (return model)</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Router = Ember.Router.extend(&#123;</span><br><span class="line">  model(params) &#123;</span><br><span class="line">    &lt;!--path <span class="string">'item/:item-name'</span>--&gt;</span><br><span class="line">    <span class="keyword">return</span> Ember.$.get(<span class="string">'/menu/'</span> + params.item_name +<span class="string">'.json'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>link-to</code></li>
+</ul>
+<h3 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h3><p><code>ember g component name</code></p>
+<ul>
+<li><code>if item.onSale &#39;on-sale&#39; &#39;&#39;</code> =&gt; <code>classNameBindings: [&#39;slae:on-sale&#39;]</code></li>
+<li>outer tag, class in <code>component/name.js</code></li>
+</ul>
+<h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><ul>
+<li><code>ember g service name</code></li>
+<li><code>this.set</code>/<code>this.get</code> to access data properties</li>
+<li>in component.js, <code>Ember.inject.service(&#39;servicename&#39;)</code></li>
+<li>put data in data in service</li>
+</ul>
+<h3 id="Respond"><a href="#Respond" class="headerlink" title="Respond"></a>Respond</h3><ul>
+<li>actions in component</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">actions: &#123;</span><br><span class="line">    functionname()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -387,7 +441,7 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/Udacity/" rel="tag"># Udacity</a>
+            <a href="/tags/EmberJS/" rel="tag"># EmberJS</a>
           
         </div>
       
@@ -400,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/14/Bootstrap-study-note/" rel="next" title="Bootstrap study note">
-                <i class="fa fa-chevron-left"></i> Bootstrap study note
+              <a href="/2018/06/19/AngularJS-1/" rel="next" title="AngularJS">
+                <i class="fa fa-chevron-left"></i> AngularJS
               </a>
             
           </div>
@@ -409,10 +463,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/17/promise/" rel="prev" title="Promise">
-                Promise <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -566,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Development-steps"><span class="nav-number">1.</span> <span class="nav-text">Development steps</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create"><span class="nav-number">1.</span> <span class="nav-text">Create</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Route"><span class="nav-number">2.</span> <span class="nav-text">Route</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Loading-Dynamic-Data"><span class="nav-number">3.</span> <span class="nav-text">Loading Dynamic Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Component"><span class="nav-number">4.</span> <span class="nav-text">Component</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Service"><span class="nav-number">5.</span> <span class="nav-text">Service</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Respond"><span class="nav-number">6.</span> <span class="nav-text">Respond</span></a></li></ol></div>
             
 
           </div>
