@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,Ajax,jQuery," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content=".ajax Method123456$.ajax(&amp;lt;url-to-fetch&amp;gt;, &amp;lt;a-configuration-object&amp;gt;);// or $.ajax(&amp;lt;just a configuration object&amp;gt;);// this is more common way, everything in configuration object Handle R">
-<meta name="keywords" content="JavaScript,Ajax,jQuery">
+<meta name="description" content="There’s a special syntax to work with promises in a more comfort fashion, called “async/await”. It’s surprisingly easy to understand and use. Using Promise: 123456789101112app.post(&apos;/users&apos;, (req, res">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ajax JQuery">
-<meta property="og:url" content="http://yoursite.com/2018/06/18/Ajax-JQuery/index.html">
+<meta property="og:title" content="JavaScript Async&#x2F;Await">
+<meta property="og:url" content="http://yoursite.com/2018/08/11/JavaScript-Async-Await/index.html">
 <meta property="og:site_name" content="Jingyi&#39;s">
-<meta property="og:description" content=".ajax Method123456$.ajax(&amp;lt;url-to-fetch&amp;gt;, &amp;lt;a-configuration-object&amp;gt;);// or $.ajax(&amp;lt;just a configuration object&amp;gt;);// this is more common way, everything in configuration object Handle R">
+<meta property="og:description" content="There’s a special syntax to work with promises in a more comfort fashion, called “async/await”. It’s surprisingly easy to understand and use. Using Promise: 123456789101112app.post(&apos;/users&apos;, (req, res">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-19T05:21:39.440Z">
+<meta property="og:updated_time" content="2018-08-11T04:32:49.969Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ajax JQuery">
-<meta name="twitter:description" content=".ajax Method123456$.ajax(&amp;lt;url-to-fetch&amp;gt;, &amp;lt;a-configuration-object&amp;gt;);// or $.ajax(&amp;lt;just a configuration object&amp;gt;);// this is more common way, everything in configuration object Handle R">
+<meta name="twitter:title" content="JavaScript Async&#x2F;Await">
+<meta name="twitter:description" content="There’s a special syntax to work with promises in a more comfort fashion, called “async/await”. It’s surprisingly easy to understand and use. Using Promise: 123456789101112app.post(&apos;/users&apos;, (req, res">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/18/Ajax-JQuery/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/11/JavaScript-Async-Await/"/>
 
 
 
 
 
-  <title>Ajax JQuery | Jingyi's</title>
+  <title>JavaScript Async/Await | Jingyi's</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/18/Ajax-JQuery/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/11/JavaScript-Async-Await/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jingyi Ding">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Ajax JQuery</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript Async/Await</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-18T16:25:08-04:00">
-                2018-06-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-11T00:19:33-04:00">
+                2018-08-11
               </time>
             
 
@@ -302,28 +302,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/front-end/" itemprop="url" rel="index">
-                    <span itemprop="name">front end</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -352,33 +330,11 @@
       
 
       
-        <h3 id="ajax-Method"><a href="#ajax-Method" class="headerlink" title=".ajax Method"></a>.ajax Method</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&lt;url-to-fetch&gt;, &lt;a-configuration-object&gt;);</span><br><span class="line"></span><br><span class="line">// or </span><br><span class="line"></span><br><span class="line">$.ajax(&lt;just a configuration object&gt;);</span><br><span class="line">// this is more common way, everything in configuration object</span><br></pre></td></tr></table></figure>
-<h3 id="Handle-Returned-Data"><a href="#Handle-Returned-Data" class="headerlink" title="Handle Returned Data"></a>Handle Returned Data</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    url: <span class="string">`https://api.unsplash.com/search/photos?page=1&amp;query=<span class="subst">$&#123;searchedForText&#125;</span>`</span></span><br><span class="line">&#125;).done(addImage)</span><br><span class="line">.fail(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    requestError(err, <span class="string">'image'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>do not need to create an XHR object</li>
-<li>instead of specifying that the request is a GET request, it defaults to that and just provide the URL of the resource we’re requesting</li>
-<li>instead of setting onload, we use the .done() method</li>
-</ul>
-<h3 id="Succss-Callback"><a href="#Succss-Callback" class="headerlink" title="Succss Callback"></a>Succss Callback</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addImage</span>(<span class="params">images</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> firstImage = images.results[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">    responseContainer.insertAdjacentHTML(<span class="string">'afterbegin'</span>, <span class="string">`&lt;figure&gt;</span></span><br><span class="line"><span class="string">            &lt;img src="<span class="subst">$&#123;firstImage.urls.small&#125;</span>" alt="<span class="subst">$&#123;searchedForText&#125;</span>"&gt;</span></span><br><span class="line"><span class="string">            &lt;figcaption&gt;<span class="subst">$&#123;searchedForText&#125;</span> by <span class="subst">$&#123;firstImage.user.name&#125;</span>&lt;/figcaption&gt;</span></span><br><span class="line"><span class="string">        &lt;/figure&gt;`</span></span><br><span class="line">    );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>the function now has one parameter <code>images</code></li>
-<li>this parameter has already been converted from JSON to a JavaScript object, so * the line that had <code>JSON.parse()</code> is no longer needed.</li>
-<li>the firstImage variable is set to the images.results first item</li>
-</ul>
-<h3 id="How-it-work"><a href="#How-it-work" class="headerlink" title="How it work"></a>How it work</h3><ul>
-<li>our code in an anonymous function calls <code>.ajax()</code></li>
-<li><code>.ajax()</code> calls a <code>.send()</code> method</li>
-<li><code>.send()</code> calls <code>options.xhr()</code></li>
-<li><code>options.xhr()</code> calls <code>jQuery.ajaxSettings.xhr</code> which creates a new XHR object</li>
-</ul>
-<h3 id="calss-method"><a href="#calss-method" class="headerlink" title="calss method"></a>calss method</h3><ul>
-<li>.get()</li>
-<li>.getJSON()</li>
-<li>.getScript()</li>
-<li>.post()</li>
-<li>.load()</li>
-</ul>
-
+        <p>There’s a special syntax to work with promises in a more comfort fashion, called “async/await”. It’s surprisingly easy to understand and use.</p>
+<p>Using Promise:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">app.post(<span class="string">'/users'</span>, (req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> body = _.pick(req.body, [<span class="string">'email'</span>, <span class="string">'name'</span>, <span class="string">'password'</span>]);</span><br><span class="line">  <span class="keyword">const</span> user = <span class="keyword">new</span> User(body);</span><br><span class="line"></span><br><span class="line">  user.save().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> user.generateAuthToken();</span><br><span class="line">  &#125;).then(<span class="function">(<span class="params">token</span>) =&gt;</span> &#123;</span><br><span class="line">    res.header(<span class="string">'x-auth'</span>, token).send(user);</span><br><span class="line">  &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    res.status(<span class="number">400</span>).send(err);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Using Async/Await:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.post(<span class="string">'/users'</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> body = _.pick(req.body, [<span class="string">'email'</span>, <span class="string">'name'</span>, <span class="string">'password'</span>]);</span><br><span class="line">    <span class="keyword">const</span> user = <span class="keyword">new</span> User(body);</span><br><span class="line">    <span class="keyword">await</span> user.save();</span><br><span class="line">    <span class="keyword">const</span> token = <span class="keyword">await</span> user.generateAuthToken();</span><br><span class="line">    res.header(<span class="string">'x-auth'</span>, token).send(user);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    res.status(<span class="number">400</span>).send(error);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -397,10 +353,6 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/Ajax/" rel="tag"># Ajax</a>
-          
-            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
-          
         </div>
       
 
@@ -412,8 +364,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/18/Ajax/" rel="next" title="Ajax">
-                <i class="fa fa-chevron-left"></i> Ajax
+              <a href="/2018/07/19/Amazon-OA2-Practice/" rel="next" title="Amazon OA2 Practice">
+                <i class="fa fa-chevron-left"></i> Amazon OA2 Practice
               </a>
             
           </div>
@@ -421,10 +373,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/19/Ajax-Fetch/" rel="prev" title="Ajax Fetch">
-                Ajax Fetch <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -476,17 +424,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -568,22 +507,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax-Method"><span class="nav-number">1.</span> <span class="nav-text">.ajax Method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Handle-Returned-Data"><span class="nav-number">2.</span> <span class="nav-text">Handle Returned Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Succss-Callback"><span class="nav-number">3.</span> <span class="nav-text">Succss Callback</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-it-work"><span class="nav-number">4.</span> <span class="nav-text">How it work</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#calss-method"><span class="nav-number">5.</span> <span class="nav-text">calss method</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
