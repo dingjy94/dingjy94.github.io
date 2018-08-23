@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="JavaScript,ReactJS," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="The Promise object is used for deferred and asynchronous computations. A promise can be:  fulfilled - The action relating to the promise succeeded rejected - The action relating to the promise failed">
-<meta name="keywords" content="JavaScript">
+<meta name="description" content="Conditional RenderUse the ‘JavaScript way’ is better than in-line condition. 123456789101112131415render() &amp;#123;    let charList = null;    if (this.state.char.length !== 0) &amp;#123;      charList = (">
+<meta name="keywords" content="JavaScript,ReactJS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Promise">
-<meta property="og:url" content="http://yoursite.com/2018/06/17/promise/index.html">
+<meta property="og:title" content="React Basic">
+<meta property="og:url" content="http://yoursite.com/2018/08/12/React-Basic/index.html">
 <meta property="og:site_name" content="Jingyi&#39;s">
-<meta property="og:description" content="The Promise object is used for deferred and asynchronous computations. A promise can be:  fulfilled - The action relating to the promise succeeded rejected - The action relating to the promise failed">
+<meta property="og:description" content="Conditional RenderUse the ‘JavaScript way’ is better than in-line condition. 123456789101112131415render() &amp;#123;    let charList = null;    if (this.state.char.length !== 0) &amp;#123;      charList = (">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-18T04:31:32.966Z">
+<meta property="og:updated_time" content="2018-08-14T04:33:34.487Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Promise">
-<meta name="twitter:description" content="The Promise object is used for deferred and asynchronous computations. A promise can be:  fulfilled - The action relating to the promise succeeded rejected - The action relating to the promise failed">
+<meta name="twitter:title" content="React Basic">
+<meta name="twitter:description" content="Conditional RenderUse the ‘JavaScript way’ is better than in-line condition. 123456789101112131415render() &amp;#123;    let charList = null;    if (this.state.char.length !== 0) &amp;#123;      charList = (">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/17/promise/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/12/React-Basic/"/>
 
 
 
 
 
-  <title>Promise | Jingyi's</title>
+  <title>React Basic | Jingyi's</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/17/promise/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/12/React-Basic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jingyi Ding">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Promise</h1>
+          <h1 class="post-title" itemprop="name headline">React Basic</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-17T13:31:02-04:00">
-                2018-06-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-12T23:48:05-04:00">
+                2018-08-12
               </time>
             
 
@@ -352,31 +352,14 @@
       
 
       
-        <p>The Promise object is used for deferred and asynchronous computations.</p>
-<p>A promise can be:</p>
-<ul>
-<li>fulfilled - The action relating to the promise succeeded</li>
-<li>rejected - The action relating to the promise failed</li>
-<li>pending - Hasn’t fulfilled or rejected yet</li>
-<li>settled - Has fulfilled or rejected</li>
+        <h2 id="Conditional-Render"><a href="#Conditional-Render" class="headerlink" title="Conditional Render"></a>Conditional Render</h2><p>Use the ‘JavaScript way’ is better than in-line condition.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">    <span class="keyword">let</span> charList = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.state.char.length !== <span class="number">0</span>) &#123;</span><br><span class="line">      charList = (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">          .....</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">      );</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">    return (</span></span><br><span class="line"><span class="regexp">      &lt;div className='App'&gt;</span></span><br><span class="line"><span class="regexp">        &#123;charList&#125;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Working-with-List"><a href="#Working-with-List" class="headerlink" title="Working with List"></a>Working with List</h2><ul>
+<li>don’t use array index as key if possible</li>
 </ul>
-<p>Promise run on main thread and potentially blocking, use try, catch</p>
-<p>Passing values or undefined through resolve() and reject() to .then and .catch. The values themselves aren’t being passed to .then or .catch, rather they’re being passed to the functions called by .then or .catch.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// log Window</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'first'</span>);</span><br><span class="line">  resolve();</span><br><span class="line">  reject();</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'second'</span>);</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'third'</span>);</span><br><span class="line">&#125;).catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;&#125;);</span><br><span class="line"><span class="comment">// log first, second third</span></span><br></pre></td></tr></table></figure>
-<h3 id="Chain"><a href="#Chain" class="headerlink" title="Chain"></a>Chain</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// getJSON return a json response</span></span><br><span class="line"><span class="comment">//createPlanetThumb(data)</span></span><br><span class="line">getJSON(<span class="string">'../data/earth-like-results.json'</span>)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">      addSearchHeader(response.query);</span><br><span class="line">      <span class="built_in">console</span>.log(response);</span><br><span class="line">      <span class="keyword">return</span> getJSON(response.results[<span class="number">0</span>]);</span><br><span class="line">    &#125;) <span class="comment">// =&gt; next then()</span></span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="built_in">Error</span>(<span class="string">'Search Request Error'</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">    .then(createPlanetThumb)</span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">      addSearchHeader(<span class="string">'unknown'</span>);</span><br><span class="line">      <span class="built_in">console</span>.log(e);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// can call both then &amp; catch</span><br><span class="line">get(&apos;example.json&apos;)</span><br><span class="line">.then(resolve) </span><br><span class="line">.catch(reject);</span><br><span class="line"></span><br><span class="line">//Cannot call both</span><br><span class="line">get(&apos;example.json&apos;)</span><br><span class="line">.then(resolve, reject);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Series: depend on each other</li>
-<li>Parallel</li>
-</ul>
-<h4 id="Array-Methods-and-Promises-Series"><a href="#Array-Methods-and-Promises-Series" class="headerlink" title="Array Methods and Promises (Series)"></a>Array Methods and Promises (Series)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">getJSON(<span class="string">'../data/earth-like-results.json'</span>)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">let</span> sequence = <span class="built_in">Promise</span>.resolve();</span><br><span class="line">      response.results.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">        sequence = sequence.then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> getJSON(url);</span><br><span class="line">      &#125;);</span><br><span class="line">    .then(createPlanetThumb);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h4 id="Promises-with-map-Parallet"><a href="#Promises-with-map-Parallet" class="headerlink" title="Promises with .map (Parallet)"></a>Promises with .map (Parallet)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">getJSON(<span class="string">'../data/earth-like-results.json'</span>)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">      addSearchHeader(response.query);</span><br><span class="line"></span><br><span class="line">      response.results.map(<span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">        getJSON(url).then(createPlanetThumb);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
-<h4 id="all"><a href="#all" class="headerlink" title=".all"></a>.all</h4><ul>
-<li>Reject if just one Promise rejects</li>
-<li>Resolves after every Promise resolves</li>
-<li>can save the order</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">getJSON(<span class="string">'../data/earth-like-results.json'</span>)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">      addSearchHeader(response.query);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Promise</span>.all(response.results.map(getJSON));</span><br><span class="line">    &#125;)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">planetData</span>) </span>&#123;</span><br><span class="line">      planetData.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">planet</span>) </span>&#123;</span><br><span class="line">        createPlanetThumb(planet);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(error);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &#123;<span class="keyword">this</span>.state.array.map(<span class="function">(<span class="params">element</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;CharComponent</span><br><span class="line">        key=&#123;id&#125; <span class="comment">//</span></span><br><span class="line">        .......</span><br><span class="line">      /&gt;</span><br><span class="line">    );</span><br><span class="line">   &#125;)&#125;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">``` </span></span><br><span class="line"><span class="regexp">- update list state immutably: copy list first, manipulate the copyed one</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">```JavaScript</span></span><br><span class="line"><span class="regexp">listHandler = () =&gt; &#123;</span></span><br><span class="line"><span class="regexp">  const listCopy = [...this.state.array];</span></span><br><span class="line"><span class="regexp">  ...</span></span><br><span class="line"><span class="regexp">  this.setState(&#123;array: listCopy&#125;);</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Error-boundary"><a href="#Error-boundary" class="headerlink" title="Error boundary"></a>Error boundary</h2><p>Use ErrorBoudary to wrap component which may cause error.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ErrorBoundary</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123; <span class="attr">hasError</span>: <span class="literal">false</span> &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentDidCatch(error, info) &#123;</span><br><span class="line">    <span class="comment">// Display fallback UI</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123; <span class="attr">hasError</span>: <span class="literal">true</span> &#125;);</span><br><span class="line">    <span class="comment">// You can also log the error to an error reporting service</span></span><br><span class="line">    logErrorToMyService(error, info);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.state.hasError) &#123;</span><br><span class="line">      <span class="comment">// You can render any custom fallback UI</span></span><br><span class="line">      <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Something went wrong.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.props.children;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -396,6 +379,8 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
+            <a href="/tags/ReactJS/" rel="tag"># ReactJS</a>
+          
         </div>
       
 
@@ -407,8 +392,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/16/MVO/" rel="next" title="MVO">
-                <i class="fa fa-chevron-left"></i> MVO
+              <a href="/2018/08/11/JavaScript-Async-Await/" rel="next" title="JavaScript Async/Await">
+                <i class="fa fa-chevron-left"></i> JavaScript Async/Await
               </a>
             
           </div>
@@ -417,8 +402,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/18/Ajax/" rel="prev" title="Ajax">
-                Ajax <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/23/Dear/" rel="prev" title="Dear">
+                Dear <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -573,7 +558,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Chain"><span class="nav-number">1.</span> <span class="nav-text">Chain</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-Methods-and-Promises-Series"><span class="nav-number">1.1.</span> <span class="nav-text">Array Methods and Promises (Series)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promises-with-map-Parallet"><span class="nav-number">1.2.</span> <span class="nav-text">Promises with .map (Parallet)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#all"><span class="nav-number">1.3.</span> <span class="nav-text">.all</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Conditional-Render"><span class="nav-number">1.</span> <span class="nav-text">Conditional Render</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Working-with-List"><span class="nav-number">2.</span> <span class="nav-text">Working with List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-boundary"><span class="nav-number">3.</span> <span class="nav-text">Error boundary</span></a></li></ol></div>
             
 
           </div>
