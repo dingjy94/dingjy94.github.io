@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="Personal,随笔," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="There’s a special syntax to work with promises in a more comfort fashion, called “async/await”. It’s surprisingly easy to understand and use. Using Promise: 123456789101112app.post(&apos;/users&apos;, (req, res">
-<meta name="keywords" content="JavaScript">
+<meta name="description" content="本来以为平淡无奇的一周，竟然出了很多意外（真鬼节？）。大事的话，大概三件，两件很开心的事：JAMHackathon, IG夺冠（然而并没有看直播），还有一个不知道该怎么写写什么的。本以为过个周末能冷静下来的，但是好不容易冷静下来一点，就更不敢回想了，还是决定给自己点时间。IG夺冠其实感慨蛮多，打算另写一篇，毕竟这大概真的算我们一代人的青春记忆了。 FCC办的这个Hackathon还是很有意思的，参">
+<meta name="keywords" content="Personal,随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript Async&#x2F;Await">
-<meta property="og:url" content="http://yoursite.com/2018/08/11/JavaScript-Async-Await/index.html">
+<meta property="og:title" content="1104随笔">
+<meta property="og:url" content="http://yoursite.com/2018/11/04/1104随笔/index.html">
 <meta property="og:site_name" content="Jingyi&#39;s">
-<meta property="og:description" content="There’s a special syntax to work with promises in a more comfort fashion, called “async/await”. It’s surprisingly easy to understand and use. Using Promise: 123456789101112app.post(&apos;/users&apos;, (req, res">
+<meta property="og:description" content="本来以为平淡无奇的一周，竟然出了很多意外（真鬼节？）。大事的话，大概三件，两件很开心的事：JAMHackathon, IG夺冠（然而并没有看直播），还有一个不知道该怎么写写什么的。本以为过个周末能冷静下来的，但是好不容易冷静下来一点，就更不敢回想了，还是决定给自己点时间。IG夺冠其实感慨蛮多，打算另写一篇，毕竟这大概真的算我们一代人的青春记忆了。 FCC办的这个Hackathon还是很有意思的，参">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-11T04:39:57.263Z">
+<meta property="og:updated_time" content="2018-11-05T08:31:39.895Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript Async&#x2F;Await">
-<meta name="twitter:description" content="There’s a special syntax to work with promises in a more comfort fashion, called “async/await”. It’s surprisingly easy to understand and use. Using Promise: 123456789101112app.post(&apos;/users&apos;, (req, res">
+<meta name="twitter:title" content="1104随笔">
+<meta name="twitter:description" content="本来以为平淡无奇的一周，竟然出了很多意外（真鬼节？）。大事的话，大概三件，两件很开心的事：JAMHackathon, IG夺冠（然而并没有看直播），还有一个不知道该怎么写写什么的。本以为过个周末能冷静下来的，但是好不容易冷静下来一点，就更不敢回想了，还是决定给自己点时间。IG夺冠其实感慨蛮多，打算另写一篇，毕竟这大概真的算我们一代人的青春记忆了。 FCC办的这个Hackathon还是很有意思的，参">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/11/JavaScript-Async-Await/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/04/1104随笔/"/>
 
 
 
 
 
-  <title>JavaScript Async/Await | Jingyi's</title>
+  <title>1104随笔 | Jingyi's</title>
   
 
 
@@ -272,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/11/JavaScript-Async-Await/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/04/1104随笔/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jingyi Ding">
@@ -289,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaScript Async/Await</h1>
+          <h1 class="post-title" itemprop="name headline">1104随笔</h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-11T00:19:33-07:00">
-                2018-08-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T23:46:01-08:00">
+                2018-11-04
               </time>
             
 
@@ -339,11 +339,14 @@
       
 
       
-        <p>There’s a special syntax to work with promises in a more comfort fashion, called “async/await”. It’s surprisingly easy to understand and use.</p>
-<p>Using Promise:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">app.post(<span class="string">'/users'</span>, (req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> body = _.pick(req.body, [<span class="string">'email'</span>, <span class="string">'name'</span>, <span class="string">'password'</span>]);</span><br><span class="line">  <span class="keyword">const</span> user = <span class="keyword">new</span> User(body);</span><br><span class="line"></span><br><span class="line">  user.save().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> user.generateAuthToken();</span><br><span class="line">  &#125;).then(<span class="function">(<span class="params">token</span>) =&gt;</span> &#123;</span><br><span class="line">    res.header(<span class="string">'x-auth'</span>, token).send(user);</span><br><span class="line">  &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    res.status(<span class="number">400</span>).send(err);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>Using Async/Await:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.post(<span class="string">'/users'</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> body = _.pick(req.body, [<span class="string">'email'</span>, <span class="string">'name'</span>, <span class="string">'password'</span>]);</span><br><span class="line">    <span class="keyword">const</span> user = <span class="keyword">new</span> User(body);</span><br><span class="line">    <span class="keyword">await</span> user.save();</span><br><span class="line">    <span class="keyword">const</span> token = <span class="keyword">await</span> user.generateAuthToken();</span><br><span class="line">    res.header(<span class="string">'x-auth'</span>, token).send(user);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    res.status(<span class="number">400</span>).send(error);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <p>本来以为平淡无奇的一周，竟然出了很多意外（真鬼节？）。大事的话，大概三件，两件很开心的事：JAMHackathon, IG夺冠（然而并没有看直播），还有一个不知道该怎么写写什么的。本以为过个周末能冷静下来的，但是好不容易冷静下来一点，就更不敢回想了，还是决定给自己点时间。IG夺冠其实感慨蛮多，打算另写一篇，毕竟这大概真的算我们一代人的青春记忆了。</p>
+<p>FCC办的这个Hackathon还是很有意思的，参加的基本都是非学生，但也不全是sde，也有很多刚刚开始学习编程的社会人士们，甚至还有几个年纪已经不小的美国大叔。在被之前的组的队友放了鸽子的情况下，现场抱住了两位Nvidia的大神和一位自己创业带团队的老哥的大腿，成功组起了队伍。最后也算是交出了一个小东西，但由于大佬们本身都是搞DL或者算法的，大家对这次的这套东西都不是很熟悉，所以变成了重在学习和参与。</p>
+<p>整个Hackathon相对而言竞争也没有那么激烈，可能是因为大家都有工作，而且奖励也不算丰厚，所以每个组更多的都是在自娱自乐，做点想做的东西，学习点新技术，和新朋友聊聊天。而且时间上相对也比较短，两天的Hackathon，不过夜，每天上午基本都是sponsor们的presentation，所以实际coding的时间可能总共只有15小时左右。更多的是对JAMstack有一个了解，试一试Gatsby和Netlify，以及一些提供microservice的API。</p>
+<p>最大的感慨其实是真的感觉到了计算机行业真是一个有趣的行业，静态网页这个在10多年前被放弃的技术竟然随着web技术的革新卷土重来，同时随着浏览器的进步和前端工程化的推进，从前更多地作为附属品的前端已经完全独立了出来，甚至随着大量专注于各种microservice的API的出现，前端工程师已经完全可以通过组装API来绕开数据库，服务器搭建，同时把业务逻辑前移来独立完成一个足够强的web服务。</p>
+<p>再就是美国的cs或者说software development的氛围真的是很好，就算工作了也在周末可以找到这样的活动，一群人沉浸在自己喜欢的事情中，用coding进行着交流。其实我两年前毅然决然地转CS，也是真的很向往这种用code说活，用programming去解决一切问题得hacker的浪漫。</p>
+<p>今天的下午有一份调查问卷，当看到了“How long have you coding?”的时候真的楞了一下。如果说追溯到第一条“Hello World”的话那大概是初中的时候贾俊教我写的那几行C，已经不记得是初几了。那会贾俊才是刚来工大软院上学的大一新生，转眼间连孩子都有了，也不禁有些感慨。高中的时间可能瞎捅咕Chrome和一些其他的软件的时候也写过几行代码，再就是写过一些简单的Excel的宏吧。大学之后学了C，学了Java，学了python，写过服务器，数据库，网页，爬虫，数据分析，安卓，但终究也都是些抱佛脚的成果，没能真的留下什么。所以想了想还是选了2年这个选项，对于我来讲真正意义上coding的时间也就是转专业之后的这两年吧。就算现在工作了，其实code写的也不怎么样，但好在还时常感到有趣，还有些热情没被磨灭，这真的是我最大的幸运了。</p>
+<p>Happy coding！</p>
+
       
     </div>
     
@@ -360,7 +363,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+            <a href="/tags/Personal/" rel="tag"># Personal</a>
+          
+            <a href="/tags/随笔/" rel="tag"># 随笔</a>
           
         </div>
       
@@ -373,8 +378,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/19/Amazon-OA2-Practice/" rel="next" title="Amazon OA2 Practice">
-                <i class="fa fa-chevron-left"></i> Amazon OA2 Practice
+              <a href="/2018/10/28/1028随笔/" rel="next" title="1028随笔">
+                <i class="fa fa-chevron-left"></i> 1028随笔
               </a>
             
           </div>
@@ -382,10 +387,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/12/React-Basic/" rel="prev" title="React Basic">
-                React Basic <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
